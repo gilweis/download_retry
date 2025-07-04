@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.1.1] - 2025-07-04
+### Changed
+- README update
+
+---
+
 ## [0.1.0] - 2025-07-04
 ### Added
 - Initial release of `download_retry.py` tool

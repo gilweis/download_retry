@@ -6,7 +6,7 @@ with open("README.md", encoding="utf-8") as f:
 
 setup(
     name="download-retry",
-    version="0.1.0",
+    version="0.1.1",
     py_modules=["download_retry"],
     install_requires=["requests"],
     entry_points={
