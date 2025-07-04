@@ -1,6 +1,9 @@
 """Module setup"""
 from setuptools import setup
 
+with open("README.md", encoding="utf-8") as f:
+    long_description = f.read()
+
 setup(
     name="download-retry",
     version="0.1.0",
@@ -13,7 +16,7 @@ setup(
     },
     author="YOUR NAME",
     description="Retry downloading a binary file from a URL with timeout and optional SSL check.",
-    long_description=open("README.md", 'r', encoding='utf-8').read(),
+    long_description=long_description,
     long_description_content_type="text/markdown",
     license="MIT",
     classifiers=[
