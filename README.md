@@ -45,6 +45,12 @@ python download_retry.py --url <URL> --delta_t <seconds> --max_t <seconds> --out
 
 Skips SSL certificate verification:
 
+python -m download_retry \
+  --url "https://my.server.local/firmware.bin" \
+  --delta_t 3 \
+  --max_t 60 \
+  --out firmware.bin
+
 python download_retry.py \
   --url "https://my.server.local/firmware.bin" \
   --delta_t 3 \
