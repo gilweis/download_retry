@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "download-retry"
-version = "0.1.0"
+version = "0.1.1"
 description = "Retry downloading a binary file from a URL with timeout and optional SSL check."
 authors = [
   { name = "Gil Weisbord" }
