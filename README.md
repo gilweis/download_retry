@@ -113,3 +113,7 @@ By default, SSL certificate validation is **disabled** using `--insecure true`. 
 ## License
 
 MIT License
+
+## Version
+
+0.1.0

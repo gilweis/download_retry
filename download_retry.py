@@ -1,17 +1,23 @@
+"""Module download_retry"""
+
 import argparse
 import time
-import requests
 import sys
+import requests
 import urllib3
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
+__version__ = "0.1.0"
+
 
 def str2bool(value: str) -> bool:
+    """ str2bool """
     return value.lower() in ('yes', 'true', 't', '1')
 
 
 def download_file(url: str, output_file: str, insecure: bool) -> bool:
+    """ download_file """
     try:
         response = requests.get(url, timeout=10, verify=not insecure)
         if response.status_code == 200:
@@ -24,7 +30,9 @@ def download_file(url: str, output_file: str, insecure: bool) -> bool:
 
 
 def main() -> None:
+    """ main """
     parser = argparse.ArgumentParser(description="Retry downloading binary file from webpage.")
+    parser.add_argument('--version', action='version', version=f"%(prog)s {__version__}")
     parser.add_argument('--url', required=True, help='Webpage URL to download')
     parser.add_argument('--delta_t', type=int, required=True, help='Retry interval in seconds')
     parser.add_argument('--max_t', type=int, required=True, help='Maximum wait time in seconds')

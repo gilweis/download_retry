@@ -1,8 +1,9 @@
+"""Module test_download"""
 import subprocess
-import os
 
 
 def test_script_runs(tmp_path):
+    """ test_script_runs """
     out_file = tmp_path / "test.bin"
 
     # Use a known small binary resource for testing
@@ -15,7 +16,7 @@ def test_script_runs(tmp_path):
         "--max_t", "5",
         "--out", str(out_file),
         "--insecure", "true"
-    ])
+    ], check=False)
 
     assert result.returncode == 0
     assert out_file.exists()
