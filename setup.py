@@ -13,7 +13,7 @@ setup(
     },
     author="YOUR NAME",
     description="Retry downloading a binary file from a URL with timeout and optional SSL check.",
-    long_description=open("README.md").read(),
+    long_description=open("README.md", 'r', encoding='utf-8').read(),
     long_description_content_type="text/markdown",
     license="MIT",
     classifiers=[
