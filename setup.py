@@ -1,0 +1,23 @@
+from setuptools import setup
+
+setup(
+    name="download-retry",
+    version="0.1.0",
+    py_modules=["download_retry"],
+    install_requires=["requests"],
+    entry_points={
+        'console_scripts': [
+            'download-retry = download_retry:main',
+        ],
+    },
+    author="YOUR NAME",
+    description="Retry downloading a binary file from a URL with timeout and optional SSL check.",
+    long_description=open("README.md").read(),
+    long_description_content_type="text/markdown",
+    license="MIT",
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+    ],
+    python_requires='>=3.6',
+)
