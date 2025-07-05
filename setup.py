@@ -6,7 +6,7 @@ with open("README.md", encoding="utf-8") as f:
 
 setup(
     name="download-retry",
-    version="0.1.1",
+    version="0.1.2",
     py_modules=["download_retry"],
     install_requires=["requests"],
     entry_points={
@@ -14,7 +14,7 @@ setup(
             'download-retry = download_retry:main',
         ],
     },
-    author="YOUR NAME",
+    author="Gil Weisbord",
     description="Retry downloading a binary file from a URL with timeout and optional SSL check.",
     long_description=long_description,
     long_description_content_type="text/markdown",

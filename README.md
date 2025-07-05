@@ -23,9 +23,19 @@ pip install -r requirements.txt
 
 ---
 
+## Installation
+
+Clone the repository.
+
+```bash
+git clone git@github.com:gilweis/download_retry.git
+cd download_retry
+```
+---
+
 ## Usage
 
-python download_retry.py --url <URL> --delta_t <seconds> --max_t <seconds> --out <output_filename> [--insecure true|false]
+python -m download_retry --url <URL> --delta_t <seconds> --max_t <seconds> --out <output_filename> [--insecure true|false]
 
 ### Arguments
 
@@ -51,15 +61,10 @@ python -m download_retry \
   --max_t 60 \
   --out firmware.bin
 
-python download_retry.py \
-  --url "https://my.server.local/firmware.bin" \
-  --delta_t 3 \
-  --max_t 60 \
-  --out firmware.bin
 
 ### Enforce SSL certificate verification (insecure=False):
 
-python download_retry.py \
+python -m download_retry \
   --url "https://secure.example.com/file.bin" \
   --delta_t 3 \
   --max_t 60 \
@@ -122,4 +127,4 @@ MIT License
 
 ## Version
 
-0.1.1
+0.1.2
